@@ -42,7 +42,7 @@ class LinebotsController < ApplicationController
         when "JavaScript"
           uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=3&categories=6&meta_key=views")
       else
-        return
+        return type
       end
         http = Net::HTTP.new(uri.host,uri.port)
         http.use_ssl = true
