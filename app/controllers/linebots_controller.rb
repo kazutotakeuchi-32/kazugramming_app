@@ -24,12 +24,12 @@ class LinebotsController < ApplicationController
   end
 
   private
-    def client
-      @client || = Line::Bot::Client.new do |config|
-        config.channel_secret = ENV['LINE_BOT_CHANNEL_SECRET']
-        config.channel_token  = ENV['LINE_BOT_CHANNEL_TOKEN']
-      end
+  def client
+    @client ||= Line::Bot::Client.new do |config|
+      config.channel_secret = ENV['LINE_BOT_CHANNEL_SECRET']
+      config.channel_token = ENV['LINE_BOT_CHANNEL_TOKEN']
     end
+  end
 
     def get_wp_article(type)
       case type
@@ -59,8 +59,8 @@ class LinebotsController < ApplicationController
         "template": {
             "type": "carousel",
             "columns": [
-              make_part(items[0])
-              meke_part(items[1])
+              make_part(items[0]),
+              meke_part(items[1]),
               meke_part(items[2])
             ],
             "imageAspectRatio": "rectangle",
@@ -89,5 +89,4 @@ class LinebotsController < ApplicationController
         ]
       }
     end
-
 end
