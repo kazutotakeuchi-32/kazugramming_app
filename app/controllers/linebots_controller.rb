@@ -56,7 +56,9 @@ class LinebotsController < ApplicationController
         res = http.request(req)
         results = JSON.parse(res.body)
         # reply_content()
-        make_reply_content(results)
+        items=results.map{|item|{title:item['title']['rendered'],thumbnail:item['thumbnail_url']['medium']['url'],url:item['guid']['rendered']}}
+        make_reply_content(items)
+
     end
 
     def make_reply_content(items)
@@ -111,9 +113,9 @@ class LinebotsController < ApplicationController
 
     def make_part(item)
       {
-        "thumbnailImageUrl": item['thumbnail_url']['medium']['url'],
+        "thumbnailImageUrl": item[:thumbnail],
         "imageBackgroundColor": "#FFFFFF",
-        "title": item['title']['rendered'],
+        "title": item[:title],
         # "text": "description",
         # "defaultAction": {
         #     "type": "uri",
@@ -125,7 +127,7 @@ class LinebotsController < ApplicationController
             {
                 "type": "uri",
                 "label": "この記事を読む",
-                "uri": item['guid']['rendered']
+                "uri": item[:url]
             }
         ]
       }
