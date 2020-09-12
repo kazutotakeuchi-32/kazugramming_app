@@ -89,6 +89,9 @@ class LinebotsController < ApplicationController
         "altText": "this is a buttons template",
         "template": {
             "type": "buttons",
+            "thumbnailImageUrl": "../assets/images/kazugramming.png",
+            "title": "カテゴリー",
+            "text": "カテゴリーを選択してください。"
             "actions": [
                 {
                     "type": "message",
@@ -110,10 +113,7 @@ class LinebotsController < ApplicationController
                   "label": "JavaScript",
                   "text": "JavaScript"
               }
-            ],
-        "thumbnailImageUrl": "../../assets/images/kazugramming.png",
-        "title": "カテゴリー",
-        "text": "カテゴリーを選択してください。"
+            ]
       }
     }
     end
