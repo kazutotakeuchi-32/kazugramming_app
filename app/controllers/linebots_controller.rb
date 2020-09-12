@@ -16,6 +16,8 @@ class LinebotsController < ApplicationController
           when Line::Bot::Event::MessageType::Text
             input = event.message['text']
             message = get_wp_article(input)
+            p   message
+            p  client.reply_message(event['replyToken'],message)
             client.reply_message(event['replyToken'],message)
         end
       end
