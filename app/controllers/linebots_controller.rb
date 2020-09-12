@@ -47,6 +47,8 @@ class LinebotsController < ApplicationController
           uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=3&categories=5&meta_key=views")
         when "JavaScript"
           uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=3&categories=6&meta_key=views")
+        when "最新記事"
+          uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=1&orderby=modified")
         when "メニュー"
          return  reply_content()
       else
@@ -65,7 +67,6 @@ class LinebotsController < ApplicationController
 
     def make_reply_content(items)
       columns= items.map{|item| make_part(item)}
-      p columns
       {
         "type": "template",
         "altText": "this is a carousel template",
