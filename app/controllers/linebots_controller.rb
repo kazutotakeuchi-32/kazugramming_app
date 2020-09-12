@@ -65,16 +65,13 @@ class LinebotsController < ApplicationController
 
     def make_reply_content(items)
       columns= items.map{|item| make_part(item)}
+      p columns
       {
         "type": "template",
         "altText": "this is a carousel template",
         "template": {
             "type": "carousel",
-            "columns": columns
-              # make_part(items[0]),
-              # make_part(items[1]),
-              # make_part(items[2])
-            ,
+            "columns": columns,
             "imageAspectRatio": "rectangle",
             "imageSize": "cover"
         }
