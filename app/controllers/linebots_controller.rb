@@ -55,8 +55,8 @@ class LinebotsController < ApplicationController
         req = Net::HTTP::Get.new(uri)
         res = http.request(req)
         results = JSON.parse(res.body)
-        reply_content()
-        # make_reply_content(results)
+        # reply_content()
+        make_reply_content(results)
     end
 
     def make_reply_content(items)
