@@ -89,7 +89,7 @@ class LinebotsController < ApplicationController
         "altText": "this is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "../assets/images/kazugramming.png",
+            "thumbnailImageUrl": "https://kazugramming.herokuapp.com/kazugramming_app/app/assets/images/kazugramming.png",
             "title": "カテゴリー",
             "text": "カテゴリーを選択してください。",
             "actions": [
