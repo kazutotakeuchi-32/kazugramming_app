@@ -16,8 +16,10 @@ class LinebotsController < ApplicationController
           when Line::Bot::Event::MessageType::Text
             input = event.message['text']
             message = get_wp_article(input)
+
+            p   event['replyToken']
             p   message
-            p  client.reply_message(event['replyToken'],message)
+            p   client.reply_message(event['replyToken'],message)
             client.reply_message(event['replyToken'],message)
         end
       end
@@ -26,11 +28,13 @@ class LinebotsController < ApplicationController
   end
 
   private
+
   def client
     @client ||= Line::Bot::Client.new do |config|
       config.channel_secret = ENV['LINE_BOT_CHANNEL_SECRET']
       config.channel_token = ENV['LINE_BOT_CHANNEL_TOKEN']
     end
+    p @client
   end
 
     def get_wp_article(type)
