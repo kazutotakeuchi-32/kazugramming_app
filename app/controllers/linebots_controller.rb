@@ -116,7 +116,7 @@ class LinebotsController < ApplicationController
         "thumbnailImageUrl": item[:thumbnail],
         "imageBackgroundColor": "#FFFFFF",
         "title": item[:title],
-        # "text": "description",
+        "text": "description",
         # "defaultAction": {
         #     "type": "uri",
         #     "label": "View detail",
