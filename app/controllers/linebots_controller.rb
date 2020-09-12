@@ -60,8 +60,8 @@ class LinebotsController < ApplicationController
             "type": "carousel",
             "columns": [
               make_part(items[0]),
-              meke_part(items[1]),
-              meke_part(items[2])
+              make_part(items[1]),
+              make_part(items[2])
             ],
             "imageAspectRatio": "rectangle",
             "imageSize": "cover"
