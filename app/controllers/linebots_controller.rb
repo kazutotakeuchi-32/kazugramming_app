@@ -111,7 +111,7 @@ class LinebotsController < ApplicationController
                   "text": "JavaScript"
               }
             ],
-        "thumbnailImageUrl": "/assets/kazugramming.png",
+        "thumbnailImageUrl": "app/assets/images/kazugramming.png",
         "title": "カテゴリー",
         "text": "カテゴリーを選択してください。"
       }
