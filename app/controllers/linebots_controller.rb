@@ -102,7 +102,7 @@ class LinebotsController < ApplicationController
                     "text": "アクション 3"
                 }
             ],
-        "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
+        # "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
         "title": "タイトルです",
         "text": "テキストです"
       }
