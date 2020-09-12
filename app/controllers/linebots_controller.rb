@@ -47,6 +47,8 @@ class LinebotsController < ApplicationController
           uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=3&categories=5&meta_key=views")
         when "JavaScript"
           uri = URI.parse("https://taketon-blog.com/kazugramming/wp-json/wp/v2/posts?per_page=3&categories=6&meta_key=views")
+        when "メニュー"
+         return  reply_content()
       else
         return type
       end
@@ -55,7 +57,7 @@ class LinebotsController < ApplicationController
         req = Net::HTTP::Get.new(uri)
         res = http.request(req)
         results = JSON.parse(res.body)
-        # reply_content()
+
         items=results.map{|item|{title:item['title']['rendered'],thumbnail:item['thumbnail_url']['medium']['url'],url:item['guid']['rendered']}}
         make_reply_content(items)
 
@@ -68,7 +70,7 @@ class LinebotsController < ApplicationController
         "template": {
             "type": "carousel",
             "columns": [
-              # items.each do |item|
+              # items.map do |item|
               #   make_part(item)
               # end
               make_part(items[0]),
@@ -90,23 +92,28 @@ class LinebotsController < ApplicationController
             "actions": [
                 {
                     "type": "message",
-                    "label": "アクション 1",
-                    "text": "アクション 1"
+                    "label": "HTML",
+                    "text": "HTML"
                 },
                 {
                     "type": "message",
-                    "label": "アクション 2",
-                    "text": "アクション 2"
+                    "label": "CSS",
+                    "text": "CSS"
                 },
                 {
                     "type": "message",
-                    "label": "アクション 3",
-                    "text": "アクション 3"
-                }
+                    "label": "Ruby",
+                    "text": "Ruby"
+                },
+                {
+                  "type": "message",
+                  "label": "JavaScript",
+                  "text": "JavaScript"
+              }
             ],
-        # "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
-        "title": "タイトルです",
-        "text": "テキストです"
+        "thumbnailImageUrl": "/assets/images/kazugramming.png",
+        "title": "カテゴリー",
+        "text": "カテゴリーを選択してください。"
       }
     }
     end
