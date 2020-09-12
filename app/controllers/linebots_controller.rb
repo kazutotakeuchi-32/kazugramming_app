@@ -19,7 +19,7 @@ class LinebotsController < ApplicationController
 
             p   event['replyToken']
             p   message
-            puts   client.reply_message(event['replyToken'],message).to_json
+            p  client.reply_message(event['replyToken'],message).message
             client.reply_message(event['replyToken'],message)
         end
       end
