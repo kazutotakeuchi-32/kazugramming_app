@@ -91,7 +91,7 @@ class LinebotsController < ApplicationController
             "type": "buttons",
             "thumbnailImageUrl": "../assets/images/kazugramming.png",
             "title": "カテゴリー",
-            "text": "カテゴリーを選択してください。"
+            "text": "カテゴリーを選択してください。",
             "actions": [
                 {
                     "type": "message",
