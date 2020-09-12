@@ -59,9 +59,12 @@ class LinebotsController < ApplicationController
         "template": {
             "type": "carousel",
             "columns": [
-              make_part(items[0]),
-              make_part(items[1]),
-              make_part(items[2])
+              items.each do |item|
+                make_part(item)
+              end
+               # make_part(items[0]),
+              # make_part(items[1]),
+              # make_part(items[2])
             ],
             "imageAspectRatio": "rectangle",
             "imageSize": "cover"
@@ -80,6 +83,7 @@ class LinebotsController < ApplicationController
         #     "label": "View detail",
         #     "uri": "http://example.com/page/123"
         # },
+
         "actions": [
             {
                 "type": "uri",
