@@ -68,12 +68,12 @@ class LinebotsController < ApplicationController
         "template": {
             "type": "carousel",
             "columns": [
-              items.each do |item|
-                make_part(item)
-              end
-              #  make_part(items[0]),
-              # make_part(items[1]),
-              # make_part(items[2])
+              # items.each do |item|
+              #   make_part(item)
+              # end
+              make_part(items[0]),
+              make_part(items[1]),
+              make_part(items[2])
             ],
             "imageAspectRatio": "rectangle",
             "imageSize": "cover"
