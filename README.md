@@ -1,5 +1,5 @@
 # Kazugramming LINE BOT
-<img src="/app/assets/images/kazugramming_bot2.png">
+<img src="/app/assets/images/kazugramming_bot2.png" width="300px" height="300px" >
 
 # Description
 kazugramming」のLINE BOTです。よく読まれる記事や、最新記事に素早くアクセスができます。リッチメニューがあるのでとても良い使用感になっております。ぜひ使ってみてください。
