@@ -1,24 +1,16 @@
-# README
+# Kazugramming LINE BOT
+<img src="/app/assets/images/kazugramming_bot1.png"  >
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Description
+kazugramming」のLINE BOTです。よく読まれる記事や、最新記事に素早くアクセスができます。リッチメニューがあるのでとても良い使用感になっております。ぜひ使ってみてください。
+# Demo
+<img src="//app/assets/images/kazugramming_bot2.png" width="500px" height="300px"><br><br>
+[Demo](https://line.me/R/ti/p/%40378klewh)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Requirement
+- ruby 2.5.1
+- Rails 5.2.4.4
+- WordPress
+- LINE MESSAGE API
+- WP API
+- Heroku
